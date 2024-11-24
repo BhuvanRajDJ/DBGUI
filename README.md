@@ -12,24 +12,24 @@ Installation Steps
 Clone the Repository:
 
 bash
-Copy code
+
 git clone <repository_url>
 cd <project_folder>
 Create and Activate a Virtual Environment:
 
 bash
-Copy code
+
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install Required Packages:
 
 bash
-Copy code
+
 pip install -r requirements.txt
 Set Up Environment Variables: Create a .env file in the root directory and add the following:
 
 bash
-Copy code
+
 FLASK_APP=app.py
 FLASK_DEBUG=True
 🗄️ Database Configuration
@@ -40,25 +40,25 @@ PostgreSQL Installation Guide
 Create a Database:
 
 sql
-Copy code
+
 CREATE DATABASE your_database_name;
 Configure Database in config.py:
 
 python
-Copy code
+
 class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost/your_database_name'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 Migrate the Database:
 
 bash
-Copy code
+
 flask db init
 flask db migrate -m "Initial migration."
 flask db upgrade
 📂 Project Structure
 csharp
-Copy code
+
 project_folder/
 │
 ├── app.py                 # Main Flask application
@@ -106,7 +106,7 @@ Click the Delete button next to the relevant post.
 Adding Database Migrations:
 
 bash
-Copy code
+
 flask db migrate -m "Your message here"
 flask db upgrade
 Testing the Application:
@@ -117,10 +117,10 @@ Verify responses and status codes.
 Start the Flask Application:
 
 bash
-Copy code
+
 flask run
 Access the Web App: Open your browser and navigate to:
 
 arduino
-Copy code
+
 http://127.0.0.1:5000/

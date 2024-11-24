@@ -4,11 +4,10 @@ from flask_migrate import Migrate
 from config import Config
 from datetime import datetime
 
-# App initialization
+
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Initialize database
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 

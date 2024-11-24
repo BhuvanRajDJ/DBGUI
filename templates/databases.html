@@ -11,31 +11,24 @@
     <a href="{{ url_for('index') }}">Home Page</a>
     <h1>Manage Databases and Tables</h1>
 
-     <!-- Form to add a new table -->
-     <form action="{{ url_for('newtable') }}" method="POST">
-
-        <!-- title -->
+          <form action="{{ url_for('newtable') }}" method="POST">
+       
          <label for="title">Table Title:</label>
          <input type="text" id="title" name="title" placeholder="Enter the post title" required><br><br>
-
-        <!-- Content -->
+       
          <label for="content">Table Content:</label>
          <textarea id="content" name="content" placeholder="Enter the post content" required></textarea><br><br>
-
-        <!-- Category -->
+       
         <label for="category">Category:</label>
         <input type="text" id="category" name="category" placeholder="Enter a category" required><br><br>
 
-        <!-- tags -->
-        <label for="tags">Tags (comma-separated)</label>
+                <label for="tags">Tags (comma-separated)</label>
         <input type="text" id="tags" name="tags" placeholder="Enter tags"required><br><br>
-
-        <!-- Author Name -->
+        
         <label for="author">Author Name:</label>
         <input type="text" id="author" name="author" placeholder="Enter your name" required><br><br>
 
-        <!-- Publication Date -->
-        <label for="date">Publication Date:</label>
+             <label for="date">Publication Date:</label>
         <input type="date" id="date" name="date" required><br><br>
         <button type="submit">Create Post</button>
     </form>

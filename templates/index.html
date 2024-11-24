@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Todo App</title>
+
+</head>
+<body>
+<div class="container">
+    <a href="{{ url_for('database_page') }}">INSERT</a>
+
+     <h2>Tables</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>content</th>
+                <th>category</th>
+                <th>tags </th>
+                <th>author</th>
+                <th>publication_date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{ post.title }}</td>
+                <td>{{ post.content }}</td>
+                <td>{{ post.category }}</td>
+                <td>{{ post.tags  }}</td>
+                <td>{{ post.author }}</td>
+                <td>{{ post.publication_date }}</td>
+                
+                <td><a href="/delete_table/{{ post.id }}">Delete</a></td>
+                <td><a href="/edit_table/{{ post.id }}">edit</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+
+
+
+</div>
+</body>
+</html>
